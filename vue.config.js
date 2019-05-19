@@ -50,7 +50,16 @@ module.exports = {
     port: 8081,
     https: false,
     hotOnly: false,
-    proxy: null // 设置代理
+    proxy: {
+      '/api': {
+        target: process.env.VUE_APP_URL, // 需要请求的地址
+        ws: true, // proxy websockets
+        changeOrigin: true, // 是否跨域
+        pathRewrite: {
+          '^/api': '/' // 替换target中的请求地址，也就是说，在请求的时候，url用'/proxy'代替'http://ip.taobao.com'
+        }
+      }
+    } // 设置代理
   },
   // 第三方插件配置
   pluginOptions: {}
