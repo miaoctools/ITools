@@ -4,6 +4,7 @@ import Router from 'vue-router'
 const About = () => import('./views/About.vue')
 const Home = () => import('./views/Home.vue')
 const Index = () => import('./views/home/index.vue')
+const Detail = () => import('./views/home/detail.vue')
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ const router = new Router({
       path: '/index',
       name: 'index',
       component: Index
+    },
+    {
+      path: '/detail',
+      name: 'detail',
+      component: Detail
     }
   ]
 })
