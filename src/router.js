@@ -4,6 +4,7 @@ import Router from 'vue-router'
 const Home = () => import('./views/home/home.vue')
 /* const Index = () => import('./views/home/index.vue') */
 const Detail = () => import('./views/detail/detail.vue')
+const Decrypt = () => import('./views/detail/cypher/decrypt.vue')
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ const router = new Router({
       path: '/detail',
       name: 'detail',
       component: Detail
+    },
+    {
+      path: '/decrypt',
+      name: 'decrypt',
+      component: Decrypt
     }
   ]
 })

@@ -1,22 +1,25 @@
-[
-    {
-        "name":"功能组件",
-        "router":"/",
-        "icon":"#icon-gongneng"
+[{
+        "name": "功能组件",
+        "router": "/decrypt",
+        "icon": "#icon-gongneng"
     },
     {
-        "name":"快递查询",
-        "router":"/",
-        "icon":"#icon-huabanfuben"
+        "name": "快递查询",
+        "router": "/",
+        "icon": "#icon-huabanfuben"
     },
     {
-        "name":"公积金",
-        "router":"/",
-        "icon":"#icon-gongjijinchaxun"
+        "name": "公积金",
+        "router": "/",
+        "icon": "#icon-gongjijinchaxun"
     },
     {
-        "name":"天气预报",
-        "router":"/",
-        "icon":"#icon-tianqi_"
+        "name": "天气预报",
+        "router": "/",
+        "icon": "#icon-tianqi_"
+    }, {
+        "name": "加密解密",
+        "router": "/decrypt",
+        "icon": "#icon-gongneng"
     }
 ]
