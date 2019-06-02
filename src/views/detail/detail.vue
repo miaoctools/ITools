@@ -7,7 +7,7 @@
         <grid :cols="3" :show-lr-borders="false">
             <grid-item v-for="(value, i) in iconList" :key="i" :link="{ path: value.router }">
                 <svg class="icon" slot="icon" aria-hidden="true">
-                  <use xlink:href="value.icon"></use>
+                  <use :xlink:href="value.icon"></use>
                 </svg>
                 <span slot="label">{{value.name}}</span>
             </grid-item>
@@ -93,10 +93,10 @@ $headFontColor:#ffffff;
    .weui-grids {
     background-color: #fff;
    }
-   .weui-tabbar{
+   .weui-tabbar {
     position:fixed;
   }
-  .weui-grids{
+  .weui-grids {
     margin-bottom: 65px;
     padding-top: 46px;
   }
