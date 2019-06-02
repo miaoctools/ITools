@@ -5,10 +5,11 @@
             <x-icon slot="overwrite-left" type="navicon" size="35" style="fill:#fff;position:relative;top:-8px;left:-3px;"></x-icon>
         </x-header>
         <grid :cols="3" :show-lr-borders="false">
-            <grid-item v-for="i in 30" :key="i">
-                <img v-if="i%2==0" slot="icon" src="../../assets/img/detail.svg">
-                <img v-if="i%2==1" slot="icon" src="../../assets/img/person.svg">
-                <span slot="label">模块{{i}}</span>
+            <grid-item v-for="(value, i) in iconList" :key="i" :link="{ path: value.router }">
+                <svg class="icon" slot="icon" aria-hidden="true">
+                  <use xlink:href="value.icon"></use>
+                </svg>
+                <span slot="label">{{value.name}}</span>
             </grid-item>
         </grid>
         <tabbar>
@@ -34,6 +35,27 @@ export default {
         Tabbar,
         TabbarItem,
         XHeader
+    },
+    data(){
+      return {
+        iconList:[]
+      }
+    },
+    created(){
+      this.axios({
+        method: 'get',
+        url: '/json/detail.json',
+        dataType: "json",
+        crossDomain: true,
+        cache: false
+      }).then(res => {
+        this.iconList=res.data;
+      }).catch(error => {
+        console.log('异常');
+      })
+    },
+    methods:{
+
     }
 }
 </script>

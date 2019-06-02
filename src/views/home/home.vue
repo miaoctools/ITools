@@ -26,11 +26,11 @@
     </swiper>
     <tabbar>
       <tabbar-item selected >
-        <img slot="icon" src="../assets/img/detail.svg">
+        <img slot="icon" src="../../assets/img/detail.svg">
         <span slot="label">iTools</span>
       </tabbar-item>
       <tabbar-item link="/detail">
-        <img slot="icon" src="../assets/img/person.svg">
+        <img slot="icon" src="../../assets/img/person.svg">
         <span slot="label">detail</span>
       </tabbar-item>
     </tabbar>
