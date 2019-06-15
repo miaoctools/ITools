@@ -5,7 +5,7 @@ const Home = () => import('./views/home/home.vue')
 /* const Index = () => import('./views/home/index.vue') */
 const Detail = () => import('./views/detail/detail.vue')
 const Decrypt = () => import('./views/detail/cypher/decrypt.vue')
-
+const Message = () => import('./views/detail/message/message.vue')
 Vue.use(Router)
 
 const router = new Router({
@@ -31,6 +31,11 @@ const router = new Router({
       path: '/decrypt',
       name: 'decrypt',
       component: Decrypt
+    },
+    {
+      path: '/message',
+      name: 'message',
+      component: Message
     }
   ]
 })

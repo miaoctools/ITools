@@ -83,7 +83,7 @@ export default {
       console.log(_this.$store.state.apiUrl)
       // let hexparams = this.CryptoUtils.strToHexCharCode(params)
       _this.axios
-        .post(_this.$store.state.apiUrl + 'demo', params)
+        .post(_this.$store.state.apiUrl + 'message', params)
         .then(response => {
           if (1 === response.data.status) {
             let StrData = _this.CryptoUtils.decrypt(response.data.resData.data)

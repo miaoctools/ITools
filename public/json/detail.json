@@ -21,5 +21,9 @@
         "name": "加密解密",
         "router": "/decrypt",
         "icon": "#icon-gongneng"
+    }, {
+        "name": "短信发送",
+        "router": "/message",
+        "icon": "#icon-gongneng"
     }
 ]
